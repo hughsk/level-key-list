@@ -11,7 +11,7 @@ database. Also includes a pretty-print mode that plays nice with
 [![level-key-list](https://nodei.co/npm/level-key-list.png?mini=true)](https://nodei.co/npm/level-key-list)
 
 ``` bash
-Usage node ./bin/level-key-list database(s...) -d [delimeter] --pretty
+Usage level-key-list database(s...) -d [delimeter] --pretty
 
 Options:
   -p, --pretty     Print the database keys in a more legible format
