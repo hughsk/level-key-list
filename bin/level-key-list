@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+var map  = require('map-async')
+var keys = require('../')
+var opts = require('optimist')
+
+  .usage('Usage $0 database(s...) -d [delimeter] --pretty')
+
+  .boolean('p')
+  .describe('p', 'Print the database keys in a more legible format')
+  .alias('p', 'pretty')
+
+  .default('d', '\xFF')
+  .describe('d', 'The level-sublevel delimiter to expect when pretty printing')
+  .alias('d', 'delimiter')
+
+var argv = opts.argv
+
+if (!argv._.length) {
+  return opts.showHelp()
+}
+
+map(argv._, function(location, i, next) {
+  keys(location, argv)
+    .once('error', next)
+    .once('end',   next)
+    .pipe(process.stdout)
+}, function(err) {
+  if (err) throw err
+})

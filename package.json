@@ -1,0 +1,28 @@
+{
+  "name": "level-key-list",
+  "description": "Command-line tool for quickly printing a list of keys in a leveldb database",
+  "version": "0.0.0",
+  "preferGlobal": true,
+  "main": "index.js",
+  "bin": {
+    "level-key-list": "bin/level-key-list"
+  },
+  "dependencies": {
+    "optimist": "~0.6.0",
+    "through": "~2.3.4",
+    "map-async": "~0.1.1",
+    "quotemeta": "0.0.0",
+    "level": "~0.18.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/level-key-list"
+  },
+  "bugs": {
+    "url": "https://github.com/hughsk/level-key-list/issues"
+  }
+}
